@@ -11,31 +11,36 @@
 <body>
     <!-- Header -->
     <header class="px-2 border-b flex justify-between">
-        <a class="font-bold uppercase text-pink-400 flex gap-2 items-center ms-8" href="#"><img class="w-12"
-                src="assets/images/pastry_icon.svg" alt="">Cookie Bliss</a>
+        <a class="font-bold uppercase text-pink-400 flex gap-2 items-center ms-8 transition-all hover:text-blue-400 hover:scale-105"
+            href="#"><img class="w-12" src="assets/images/pastry_icon.svg" alt="">Cookie Bliss</a>
         <!-- Navigation Bar -->
         <nav>
             <ul class="font-semibold text-blue-400 flex gap-4 items-center py-4">
-                <li><a class="block py-2 px-4 border-2 border-blue-400 rounded-full" href="">Home</a></li>
-                <li><a class="block py-2 px-4 border-2 border-blue-400 rounded-full" href="">About</a></li>
-                <li><a class="block py-2 px-4 border-2 border-blue-400 rounded-full" href="">Products</a></li>
-                <li><a class="block py-2 px-4 border-2 border-blue-400 rounded-full" href="">Benefits</a></li>
-                <li><a class="block py-2 px-4 border-2 border-blue-400 rounded-full" href="">Team</a></li>
+                <li><a class="block py-2 px-4 border-2 border-blue-400 rounded-full transition-all duration-300 hover:scale-110 hover:bg-blue-200 hover:font-bold hover:text-white hover:shadow-md hover:shadow-blue-700"
+                        href="">Home</a></li>
+                <li><a class="block py-2 px-4 border-2 border-blue-400 rounded-full transition-all duration-300 hover:scale-110 hover:bg-blue-200 hover:font-bold hover:text-white hover:shadow-md hover:shadow-blue-700"
+                        href="">About</a></li>
+                <li><a class="block py-2 px-4 border-2 border-blue-400 rounded-full transition-all duration-300 hover:scale-110 hover:bg-blue-200 hover:font-bold hover:text-white hover:shadow-md hover:shadow-blue-700"
+                        href="">Products</a></li>
+                <li><a class="block py-2 px-4 border-2 border-blue-400 rounded-full transition-all duration-300 hover:scale-110 hover:bg-blue-200 hover:font-bold hover:text-white hover:shadow-md hover:shadow-blue-700"
+                        href="">Recipes</a></li>
+                <li><a class="block py-2 px-4 border-2 border-blue-400 rounded-full transition-all duration-300 hover:scale-110 hover:bg-blue-200 hover:font-bold hover:text-white hover:shadow-md hover:shadow-blue-700"
+                        href="">Team</a></li>
 
             </ul>
         </nav>
 
         <div>
             <ul class="font-semibold text-blue-400 flex gap-2 items-center py-4 me-8">
-                <li><button class="py-2 px-4 relative inline-flex items-center" href=""><img
+                <li><button class="py-2 px-4 relative inline-flex items-center hover:scale-105 transition" href=""><img
                             src="assets/images/shopping_icon.svg" class="w-8" alt="shopping cart icon">
                         <div
-                            class="absolute inline-flex items-center justify-center w-7 h-7 text-xs font-bold text-white bg-pink-400 border-2 border-white rounded-full -top-1 -end-1 dark:border-gray-900">
+                            class="absolute inline-flex items-center justify-center w-7 h-7 text-xs font-bold text-white bg-pink-400 border-2 border-white rounded-full -top-1 -end-1">
                             20</div>
                     </button>
 
                 </li>
-                <li><a class="block py-2 px-4 border-2 border-blue-400 bg-blue-400 text-white shadow-md shadow-cyan-200 rounded-full"
+                <li><a class="block py-2 px-4 border-2 border-blue-400 bg-blue-400 text-white rounded-full transition-all hover:scale-110 hover:bg-white hover:font-bold hover:text-blue-400 hover:shadow-md hover:shadow-blue-700"
                         href="">Contact US</a>
                 </li>
             </ul>
@@ -45,10 +50,13 @@
     <div class="w-full bg-cover bg-center" style="height: 32rem; background-image: url(assets/images/cookie-bg.jpg);">
         <div class="flex items-center justify-center h-full w-full">
             <div class="text-center">
-                <h1
-                    class="text-pink-400 text-4xl font-bold uppercase shadow-lg shadow-cyan-200 bg-white bg-opacity-90 rounded-full py-4 px-8">
-                    Discover a new level of cookie bliss
-                </h1>
+                <a href="">
+                    <h1
+                        class="text-pink-400 text-4xl font-bold uppercase  bg-white bg-opacity-90 rounded-full py-4 px-8 hover:scale-110 transition duration-300 easy-in shadow-xl hover:shadow-cyan-200 hover:font-extrabold">
+                        Discover a new level of cookie bliss
+                    </h1>
+                </a>
+
             </div>
         </div>
     </div>
@@ -58,35 +66,24 @@
         <!-- Product Description -->
         <section class="py-12">
             <div class="flex justify-center">
-                <img class="w-1/4 rounded-s-2xl" src="assets/images/cookie-product.jpg" alt="">
-                <div class="w-1/3 border-2 border-s-0 border-blue-400 ps-12 pe-12 rounded-e-2xl">
-                    <div>
-                        <h2 class="text-4xl font-bold pb-8 mt-12 text-blue-400">Our Cookie</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, repudiandae
+                <div class="w-64 h-64 overflow-hidden rounded-s-2xl relative"><img class="w-full h-full object-cover"
+                        src="assets/images/cookie-product.jpg" alt=""></div>
+                <div class="w-1/2 h-64 border-2 border-s-0 border-blue-400 ps-12 pe-12 rounded-e-2xl">
+                    <div class="mt-8">
+                        <h2 class="text-4xl font-bold text-blue-400 pb-6">Our Cookie</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+                            repudiandae
                             aliquam
                             dicta magni nisi
                             cum quas qui omnis. Cumque eaque quam culpa soluta odio praesentium cum nesciunt!
-                            Voluptatibus
-                            tempora recusandae ullam minima temporibus, unde officia assumenda blanditiis officiis vitae
-                            quia.
                         </p>
-                        <a class="inline-block mt-4 py-2 px-4 border-2 border-blue-400 rounded-full font-semibold text-blue-400"
+                        <a class="inline-block mt-4 py-2 px-4 border-2 border-blue-400 rounded-full font-semibold text-blue-400 transition-all duration-300 hover:scale-110 hover:bg-blue-200 hover:font-bold hover:text-white hover:shadow-md hover:shadow-blue-700"
                             href="">Learn more &hearts;</a>
                     </div>
-                    <div>
-                        <h2 class="text-4xl font-bold pb-8 mt-12 text-blue-400">Ingredients</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, repudiandae
-                            aliquam
-                            dicta magni nisi
-                            cum quas qui omnis. Cumque eaque quam culpa soluta odio praesentium cum nesciunt!
-                            Voluptatibus
-                            tempora recusandae ullam minima temporibus, unde officia assumenda blanditiis officiis vitae
-                            quia.
-                        </p>
-                        <a class="inline-block mt-4 py-2 px-4 border-2 border-blue-400 rounded-full font-semibold text-blue-400"
-                            href="">Learn more &hearts;</a>
-                    </div>
+
                 </div>
+
+            </div>
             </div>
         </section>
 
@@ -104,14 +101,16 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-t mt-10 py-10 px-4 bg-pink-200">
+    <footer class=" border-t mt-10 py-10 px-4 bg-pink-200">
         <div class="flex justify-center gap-48">
             <!-- About -->
             <div class="w-1/3 ms-24">
                 <h5 class="block py-1 text-gray-500 font-bold uppercase">Cookie Bliss</h5>
-                <p class="block py-1 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut
+                <p class="block py-1 text-gray-500">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Fugit aut
                     ea quibusdam ab itaque voluptatum!
-                    Nesciunt reiciendis consectetur debitis voluptates quia esse eligendi incidunt? Animi, deleniti!
+                    Nesciunt reiciendis consectetur debitis voluptates quia esse eligendi
+                    incidunt? Animi, deleniti!
                     Quos iste vitae est?</p>
             </div>
 
