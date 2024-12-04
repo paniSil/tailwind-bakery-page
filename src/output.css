@@ -826,6 +826,11 @@ video {
   border-end-end-radius: 1rem;
 }
 
+.rounded-s-2xl {
+  border-start-start-radius: 1rem;
+  border-end-start-radius: 1rem;
+}
+
 .border-2 {
   border-width: 2px;
 }
