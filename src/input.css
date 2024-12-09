@@ -5,49 +5,71 @@
 @tailwind utilities;
 
 .body {
-  @apply bg-white text-gray-600 font-main;
+  @apply bg-white text-gray-600 font-main dark:bg-slate-900;
+}
+
+.page-container {
+  @apply container mx-auto px-4;
 }
 
 /* Navigation */
-.nav-header {
-  @apply px-2 border-b flex justify-between shadow-lg shadow-gray-200;
+.header {
+  @apply border-b flex gap-8 items-center justify-between mb-10 border-blue-400;
 }
 
-.nav-list {
+.logo {
+  @apply font-bold uppercase text-pink-400 flex gap-2 items-center ms-4 transition-all duration-300 hover:text-blue-400 hover:scale-105 dark:text-blue-400 dark:hover:text-pink-400;
+}
+
+.navbar {
+  @apply px-2 flex justify-between;
+}
+
+.navbar-list {
   @apply flex gap-4 items-center py-4;
 }
-.nav-logo {
-  @apply font-bold uppercase text-pink-400 flex gap-2 items-center ms-4 transition-all duration-300 hover:text-blue-400 hover:scale-105;
-}
-.nav-item {
-  @apply font-semibold text-blue-400 block py-2 px-4 border-2 border-blue-400 rounded-full transition-all duration-300 hover:scale-110 hover:bg-blue-200 hover:font-bold hover:text-white hover:shadow-md hover:shadow-blue-700;
+
+.navbar-item {
+  @apply font-semibold text-blue-400 block py-2 px-4 border-2 border-blue-400 rounded-full transition-all duration-300 hover:scale-110 hover:bg-blue-200 hover:font-bold hover:text-white hover:shadow-md hover:shadow-blue-700 dark:hover:text-pink-400 dark:hover:border-pink-400 dark:hover:bg-pink-200 dark:hover:shadow-pink-700 dark:bg-slate-800;
 }
 
-.nav-cart {
+.navbar-cart {
   @apply py-2 px-4 relative inline-flex items-center hover:scale-105 transition;
 }
 
-.nav-badge {
-  @apply absolute inline-flex items-center justify-center w-7 h-7 text-xs font-bold text-white bg-pink-400 border-2 border-white rounded-full -top-1 -end-1;
+.navbar-badge {
+  @apply absolute inline-flex items-center justify-center w-7 h-7 text-xs font-bold text-white bg-pink-400 border-2 border-white rounded-full -top-1 -end-1 dark:border-slate-900;
 }
 
 /* Buttons */
 .switch-button {
-  @apply w-20 h-10 rounded-full bg-white flex items-center transition duration-300 focus:outline-none shadow border-2 border-pink-200;
+  @apply relative w-20 h-10 rounded-full bg-white flex items-center transform transition duration-500 focus:outline-none shadow border-2 border-pink-200 hover:scale-110 dark:bg-slate-800 dark:border-blue-400;
 }
 
 .action-button {
-  @apply block py-2 px-4 border-2 border-pink-400 bg-pink-400 text-white rounded-full transition-all duration-300 hover:scale-105 hover:bg-pink-100 hover:font-bold hover:text-pink-400 hover:shadow-md hover:shadow-pink-200;
+  @apply block py-2 px-4 border-2 border-pink-400 bg-pink-400 text-white rounded-full transition-all duration-300 hover:scale-105 hover:bg-pink-100 hover:font-bold hover:text-pink-400 hover:shadow-md hover:shadow-pink-200  dark:hover:bg-slate-900 dark:hover:shadow-pink-700;
 }
 
 /* Footer */
+.footer {
+  @apply mt-10 py-10 px-4 bg-blue-50 dark:bg-blue-950;
+}
+
+.footer-header {
+  @apply block py-1 text-blue-500 font-bold uppercase;
+}
+
 .footer-link {
   @apply block py-1 text-blue-400 underline underline-offset-4 decoration-dotted decoration-2 hover:decoration-solid hover:decoration-2 hover:text-blue-500;
 }
 
+.footer-contacts {
+  @apply block py-1 text-blue-400;
+}
+
 /* Breadcrumbs */
 .breadcrumbs {
-  @apply mt-4 px-4 text-sm text-gray-400;
+  @apply mt-4 px-4 text-sm text-gray-400 dark:text-slate-500;
 }
 .breadcrumbs-active {
   @apply text-blue-400 font-semibold;
@@ -55,6 +77,10 @@
 
 .breadcrumbs-inactive {
   @apply hover:text-blue-400 hover:font-semibold;
+}
+
+.breadcrumbs-home {
+  @apply inline-block w-6 h-6 -mt-1 fill-gray-400 hover:fill-blue-400 dark:fill-slate-500;
 }
 
 /* Hero section */
@@ -71,7 +97,7 @@
 }
 
 .hero-header {
-  @apply font-secondary absolute px-6 py-4 bottom-0 left-0 z-10 leading-tight text-4xl font-bold text-pink-100 text-opacity-60 transition duration-300 group-hover:text-opacity-100;
+  @apply font-secondary absolute px-6 py-4 bottom-0 left-0 z-10 leading-tight text-4xl font-bold text-pink-100 text-opacity-60 transition duration-300 group-hover:text-opacity-100 dark:text-blue-200 dark:text-opacity-70;
 }
 
 .hero-image-primary {
@@ -83,11 +109,11 @@
 }
 
 .hero-image__gradient-primary {
-  @apply absolute left-0 top-0 w-full h-full bg-gradient-to-tr from-blue-500 via-purple-300 to-pink-400 opacity-60 transition duration-500 group-hover:opacity-40;
+  @apply absolute left-0 top-0 w-full h-full bg-gradient-to-tr from-blue-500 via-purple-300 to-pink-400 opacity-60 transition duration-500 group-hover:opacity-40 dark:from-blue-700 dark:via-purple-500 dark:to-pink-700;
 }
 
 .hero-image__gradient-secondary {
-  @apply absolute left-0 top-0 w-full h-full bg-gradient-to-bl from-blue-500 via-purple-300 to-pink-400 opacity-60 transition duration-500 group-hover:opacity-40;
+  @apply absolute left-0 top-0 w-full h-full bg-gradient-to-bl from-blue-500 via-purple-300 to-pink-400 opacity-60 transition duration-500 group-hover:opacity-40 dark:from-blue-700 dark:via-purple-500 dark:to-pink-700;
 }
 
 /* Main */
@@ -100,23 +126,23 @@
 }
 
 .header-main {
-  @apply font-secondary text-4xl font-bold text-white ps-6 pe-4 pt-3 pb-3 bg-blue-300 rounded-3xl mb-4;
+  @apply font-secondary text-4xl font-bold text-white ps-6 pe-4 pt-3 pb-3 bg-blue-300 rounded-3xl mb-4 dark:bg-blue-600;
 }
 
 .container-article {
-  @apply flex relative rounded-2xl overflow-hidden shadow-md transition duration-300 shadow-gray-200 hover:shadow-pink-200 hover:shadow-lg;
+  @apply flex relative rounded-2xl overflow-hidden shadow-md transition duration-300 shadow-gray-200 dark:shadow-black hover:shadow-pink-200 hover:shadow-lg dark:hover:shadow-pink-900;
 }
 
 .article-text {
-  @apply border border-s-0 ps-72 pe-12 rounded-e-2xl overflow-hidden md:h-64 relative after:content-[''] after:absolute after:inset-x-0 after:bottom-0 after:h-32 after:bg-gradient-to-b after:from-transparent after:to-white;
+  @apply border border-s-0 ps-72 pe-12 rounded-e-2xl overflow-hidden md:h-64 relative after:content-[''] after:absolute after:inset-x-0 after:bottom-0 after:h-32 after:bg-gradient-to-b after:from-transparent after:to-white dark:after:to-slate-900 dark:text-slate-400 dark:border-slate-700;
 }
 
 .article-header {
-  @apply mt-6 pb-4 text-2xl font-bold text-pink-400 font-secondary transition duration-300 group-hover:text-blue-400;
+  @apply mt-6 pb-4 text-2xl font-bold text-pink-400 font-secondary transition duration-300 group-hover:text-blue-400 dark:text-blue-400 dark:group-hover:text-pink-400;
 }
 
 .article-description {
-  @apply transition duration-300 group-hover:text-gray-400;
+  @apply transition duration-300 group-hover:text-gray-400 dark:group-hover:text-slate-600;
 }
 
 .article-cover {
@@ -128,28 +154,46 @@
 }
 
 .article-image__overlay {
-  @apply absolute left-0 top-0 w-full h-full bg-gradient-to-bl from-blue-300 via-purple-300 to-pink-300 opacity-40 transition duration-300 group-hover:opacity-60;
+  @apply absolute left-0 top-0 w-full h-full bg-gradient-to-bl dark:from-blue-700 dark:via-purple-500 dark:to-pink-700 opacity-40 transition duration-300 group-hover:opacity-60;
 }
 
+/* Pagination */
 .pagination {
-  @apply block py-1 px-3 border border-gray-200 text-gray-400 transition duration-150 hover:bg-blue-200 hover:text-blue-400 hover:border-blue-400 hover:font-semibold;
+  @apply block py-1 px-3 border border-gray-200 text-gray-400 transition duration-150 hover:bg-blue-200 hover:text-blue-400 hover:border-blue-400 hover:font-semibold dark:border-slate-700 dark:text-slate-500 dark:hover:text-pink-700 dark:hover:border-pink-700 dark:hover:bg-pink-400;
 }
 
 .pagination-active {
-  @apply font-semibold text-blue-400 border-blue-400;
+  @apply font-semibold text-blue-400 border-blue-400 dark:text-pink-400 dark:border-pink-400;
+}
+
+/* Subscription */
+.form-container {
+  @apply w-full mx-auto rounded-3xl shadow-md shadow-gray-200 border p-6 dark:shadow-black dark:border-slate-700;
+}
+
+.form-header {
+  @apply font-bold uppercase text-pink-400 text-lg mb-4;
+}
+
+.form-text {
+  @apply block mb-4 dark:text-slate-400;
+}
+
+.form-field {
+  @apply shadow appearance-none border-2 border-gray-400 rounded-full w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-pink-400 focus:text-pink-400 dark:bg-slate-800 dark:border-slate-600;
 }
 
 /* Products */
 .header-products {
-  @apply font-secondary text-2xl font-bold text-white ps-6 pe-4 pt-3 pb-3 bg-blue-300 rounded-3xl mb-4;
+  @apply font-secondary text-2xl font-bold text-white ps-6 pe-4 pt-3 pb-3 bg-blue-300 rounded-3xl mb-4 dark:bg-blue-600;
 }
 
 .product-container {
-  @apply w-full mx-auto flex-col items-center rounded-3xl shadow-md shadow-gray-200 border p-6 hover:shadow-pink-200 hover:shadow-lg;
+  @apply w-full mx-auto flex-col items-center rounded-3xl shadow-md shadow-gray-200 border p-6 hover:shadow-pink-200 hover:shadow-lg dark:shadow-black dark:hover:shadow-pink-900 dark:border-slate-700;
 }
 
 .product-header {
-  @apply mt-6 pb-1 text-xl font-bold text-center text-pink-400 font-secondary transition duration-300 group-hover:text-blue-400;
+  @apply mt-6 pb-1 text-xl font-bold text-center text-pink-400 font-secondary transition duration-300 group-hover:text-blue-400 dark:text-blue-400 dark:group-hover:text-pink-400;
 }
 
 .product-description {
