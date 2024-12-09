@@ -85,11 +85,11 @@
 
 /* Hero section */
 .hero-section {
-  @apply px-4 flex gap-4 flex-col md:flex-row;
+  @apply px-4 flex gap-4 flex-col md:flex-row mb-12;
 }
 
 .hero-article {
-  @apply h-96 relative mb-8 rounded-3xl overflow-hidden;
+  @apply h-96 relative rounded-3xl overflow-hidden;
 }
 
 .hero-link {
@@ -118,7 +118,7 @@
 
 /* Main */
 .container-main {
-  @apply flex px-4 gap-4;
+  @apply flex flex-col md:flex-row px-4 gap-4;
 }
 
 .container-grow {
@@ -134,7 +134,7 @@
 }
 
 .article-text {
-  @apply border border-s-0 ps-72 pe-12 rounded-e-2xl overflow-hidden md:h-64 relative after:content-[''] after:absolute after:inset-x-0 after:bottom-0 after:h-32 after:bg-gradient-to-b after:from-transparent after:to-white dark:after:to-slate-900 dark:text-slate-400 dark:border-slate-700;
+  @apply border border-t-0 md:border-t md:border-s-0 ps-12 md:ps-72 pe-12 mt-64 md:mt-0 rounded-b-2xl md:rounded-e-2xl overflow-hidden md:h-64 relative after:content-[''] after:absolute after:inset-x-0 after:bottom-0 after:h-32 after:bg-gradient-to-b after:from-transparent after:to-white dark:after:to-slate-900 dark:text-slate-400 dark:border-slate-700;
 }
 
 .article-header {
@@ -146,11 +146,11 @@
 }
 
 .article-cover {
-  @apply absolute left-0 top-0 w-64 h-64 overflow-hidden;
+  @apply absolute left-0 top-0 w-full md:w-64 h-64 overflow-hidden;
 }
 
 .article-image {
-  @apply w-64 h-64 object-cover transition duration-300 ease-in-out group-hover:scale-105 group-hover:blur-sm;
+  @apply w-full md:w-64 h-64 object-cover transition duration-300 ease-in-out group-hover:scale-105 group-hover:blur-sm;
 }
 
 .article-image__overlay {
@@ -181,25 +181,4 @@
 
 .form-field {
   @apply shadow appearance-none border-2 border-gray-400 rounded-full w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-pink-400 focus:text-pink-400 dark:bg-slate-800 dark:border-slate-600;
-}
-
-/* Products */
-.header-products {
-  @apply font-secondary text-2xl font-bold text-white ps-6 pe-4 pt-3 pb-3 bg-blue-300 rounded-3xl mb-4 dark:bg-blue-600;
-}
-
-.product-container {
-  @apply w-full mx-auto flex-col items-center rounded-3xl shadow-md shadow-gray-200 border p-6 hover:shadow-pink-200 hover:shadow-lg dark:shadow-black dark:hover:shadow-pink-900 dark:border-slate-700;
-}
-
-.product-header {
-  @apply mt-6 pb-1 text-xl font-bold text-center text-pink-400 font-secondary transition duration-300 group-hover:text-blue-400 dark:text-blue-400 dark:group-hover:text-pink-400;
-}
-
-.product-description {
-  @apply group-hover:text-gray-400 text-sm text-center pb-4;
-}
-
-.wishlist-button {
-  @apply block py-2 px-4 border-2 border-pink-400 text-pink-400 rounded-full transition-all duration-300 hover:scale-105 hover:bg-pink-100 hover:shadow-md hover:shadow-pink-200;
 }
