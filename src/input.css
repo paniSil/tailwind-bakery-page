@@ -1,34 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-* {
-  @apply text-gray-600;
+.body {
+  @apply bg-white text-gray-600 font-main;
 }
-.navbar-item {
+
+/* Navigation */
+.nav-header {
+  @apply px-2 border-b flex justify-between shadow-lg shadow-gray-200;
+}
+
+.nav-list {
+  @apply flex gap-4 items-center py-4;
+}
+.nav-logo {
+  @apply font-bold uppercase text-pink-400 flex gap-2 items-center ms-4 transition-all duration-300 hover:text-blue-400 hover:scale-105;
+}
+.nav-item {
   @apply font-semibold text-blue-400 block py-2 px-4 border-2 border-blue-400 rounded-full transition-all duration-300 hover:scale-110 hover:bg-blue-200 hover:font-bold hover:text-white hover:shadow-md hover:shadow-blue-700;
+}
+
+.nav-cart {
+  @apply py-2 px-4 relative inline-flex items-center hover:scale-105 transition;
+}
+
+.nav-badge {
+  @apply absolute inline-flex items-center justify-center w-7 h-7 text-xs font-bold text-white bg-pink-400 border-2 border-white rounded-full -top-1 -end-1;
+}
+
+/* Buttons */
+.switch-button {
+  @apply w-20 h-10 rounded-full bg-white flex items-center transition duration-300 focus:outline-none shadow border-2 border-pink-200;
 }
 
 .action-button {
   @apply block py-2 px-4 border-2 border-pink-400 bg-pink-400 text-white rounded-full transition-all duration-300 hover:scale-105 hover:bg-pink-100 hover:font-bold hover:text-pink-400 hover:shadow-md hover:shadow-pink-200;
 }
 
-.cover-image-primary {
-  @apply w-full h-full object-cover transition-all duration-300 scale-100 hover:scale-110;
+/* Footer */
+.footer-link {
+  @apply block py-1 text-blue-400 underline underline-offset-4 decoration-dotted decoration-2 hover:decoration-solid hover:decoration-2 hover:text-blue-500;
 }
 
-.cover-image-secondary {
-  @apply w-full h-full object-cover transition-all duration-300 scale-110 hover:scale-100;
+/* Breadcrumbs */
+.breadcrumbs {
+  @apply mt-4 px-4 text-sm text-gray-400;
+}
+.breadcrumbs-active {
+  @apply text-blue-400 font-semibold;
+}
+
+.breadcrumbs-inactive {
+  @apply hover:text-blue-400 hover:font-semibold;
+}
+
+/* Hero section */
+.hero-section {
+  @apply px-4 flex gap-4 flex-col md:flex-row;
+}
+
+.hero-article {
+  @apply h-96 relative mb-8 rounded-3xl overflow-hidden;
+}
+
+.hero-link {
+  @apply absolute top-0 bottom-0 left-0 right-0;
+}
+
+.hero-header {
+  @apply font-secondary absolute px-6 py-4 bottom-0 left-0 z-10 leading-tight text-4xl font-bold text-pink-100 text-opacity-60 transition duration-300 group-hover:text-opacity-100;
+}
+
+.hero-image-primary {
+  @apply absolute left-0 top-0 w-full h-full object-cover transition duration-500 ease-in-out group-hover:scale-125 group-hover:blur-sm;
+}
+
+.hero-image-secondary {
+  @apply absolute left-0 top-0 w-full h-full object-cover scale-125 transition duration-500 ease-in-out group-hover:scale-100 group-hover:blur-sm;
+}
+
+.hero-image__gradient-primary {
+  @apply absolute left-0 top-0 w-full h-full bg-gradient-to-tr from-blue-500 via-purple-300 to-pink-400 opacity-60 transition duration-500 group-hover:opacity-40;
+}
+
+.hero-image__gradient-secondary {
+  @apply absolute left-0 top-0 w-full h-full bg-gradient-to-bl from-blue-500 via-purple-300 to-pink-400 opacity-60 transition duration-500 group-hover:opacity-40;
+}
+
+/* Main */
+.container-main {
+  @apply flex px-4 gap-4;
+}
+
+.container-grow {
+  @apply flex-grow basis-0;
+}
+
+.header-main {
+  @apply font-secondary text-4xl font-bold text-white ps-6 pe-4 pt-3 pb-3 bg-blue-300 rounded-3xl mb-4;
+}
+
+.container-article {
+  @apply flex relative rounded-2xl overflow-hidden shadow-md transition duration-300 shadow-gray-200 hover:shadow-pink-200 hover:shadow-lg;
+}
+
+.article-text {
+  @apply border border-s-0 ps-72 pe-12 rounded-e-2xl overflow-hidden md:h-64 relative after:content-[''] after:absolute after:inset-x-0 after:bottom-0 after:h-32 after:bg-gradient-to-b after:from-transparent after:to-white;
+}
+
+.article-header {
+  @apply mt-6 pb-4 text-2xl font-bold text-pink-400 font-secondary transition duration-300 group-hover:text-blue-400;
+}
+
+.article-description {
+  @apply transition duration-300 group-hover:text-gray-400;
+}
+
+.article-cover {
+  @apply absolute left-0 top-0 w-64 h-64 overflow-hidden;
+}
+
+.article-image {
+  @apply w-64 h-64 object-cover transition duration-300 ease-in-out group-hover:scale-105 group-hover:blur-sm;
+}
+
+.article-image__overlay {
+  @apply absolute left-0 top-0 w-full h-full bg-gradient-to-bl from-blue-300 via-purple-300 to-pink-300 opacity-40 transition duration-300 group-hover:opacity-60;
 }
 
 .pagination {
-  @apply block py-1 px-3 border border-gray-200 text-gray-500 transition duration-150 hover:bg-pink-200 hover:text-blue-400 hover:border-blue-400;
+  @apply block py-1 px-3 border border-gray-200 text-gray-400 transition duration-150 hover:bg-blue-200 hover:text-blue-400 hover:border-blue-400 hover:font-semibold;
 }
 
-.cover-primary {
-  @apply absolute left-0 top-0 w-full h-full bg-gradient-to-tr from-blue-500 via-purple-300 to-pink-400 opacity-60;
+.pagination-active {
+  @apply font-semibold text-blue-400 border-blue-400;
 }
 
-.cover-secondary {
-  @apply absolute left-0 top-0 w-full h-full bg-gradient-to-bl from-blue-500 via-purple-300 to-pink-400 opacity-60;
+/* Products */
+.header-products {
+  @apply font-secondary text-2xl font-bold text-white ps-6 pe-4 pt-3 pb-3 bg-blue-300 rounded-3xl mb-4;
+}
+
+.product-container {
+  @apply w-full mx-auto flex-col items-center rounded-3xl shadow-md shadow-gray-200 border p-6 hover:shadow-pink-200 hover:shadow-lg;
+}
+
+.product-header {
+  @apply mt-6 pb-1 text-xl font-bold text-center text-pink-400 font-secondary transition duration-300 group-hover:text-blue-400;
+}
+
+.product-description {
+  @apply group-hover:text-gray-400 text-sm text-center pb-4;
+}
+
+.wishlist-button {
+  @apply block py-2 px-4 border-2 border-pink-400 text-pink-400 rounded-full transition-all duration-300 hover:scale-105 hover:bg-pink-100 hover:shadow-md hover:shadow-pink-200;
 }

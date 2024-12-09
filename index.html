@@ -8,130 +8,191 @@
   <title>Document</title>
 </head>
 
-<body>
+<body class="body">
   <!-- Header -->
   <header>
     <!-- Navigation -->
-    <nav class="px-2 border-b flex justify-between shadow-lg shadow-gray-200">
-      <a class="font-bold uppercase text-pink-400 flex gap-2 items-center ms-8 transition-all duration-300 hover:text-blue-400 hover:scale-105"
-        href="#"><img class="w-12" src="assets/images/pastry_icon.svg" alt="">Cookie Bliss</a>
+    <nav class="nav-header">
+      <a class="nav-logo" href="#"><img class="w-12" src="assets/images/pastry_icon.svg" alt="">Cookie Bliss</a>
 
       <div class="hidden md:block">
-        <ul class="flex gap-4 items-center py-4">
-          <li><a class="navbar-item" href="">Home</a></li>
-          <li><a class="navbar-item" href="">Products</a></li>
-          <li><a class="navbar-item" href="">Recipes</a></li>
-          <li><a class="navbar-item" href="">Team</a></li>
+        <ul class="nav-list">
+          <li><a class="nav-item" href="">Home</a></li>
+          <li><a class="nav-item" href="">Products</a></li>
+          <li><a class="nav-item" href="">Recipes</a></li>
+          <li><a class="nav-item" href="">Team</a></li>
+
+          <!-- Theme switcher button -->
+          <li> <button class="switch-button transition duration-300 hover:scale-110">
+              <span class="w-11 h-11 rounded-full transition duration-500 transform bg-pink-400 p-2 text-white">
+                <?xml version="1.0" ?><svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                  <rect fill="none" height="256" width="256" />
+                  <circle cx="128" cy="128" fill="none" r="60" stroke="#fff" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="16" />
+                  <line fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"
+                    x1="128" x2="128" y1="36" y2="16" />
+                  <line fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"
+                    x1="62.9" x2="48.8" y1="62.9" y2="48.8" />
+                  <line fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"
+                    x1="36" x2="16" y1="128" y2="128" />
+                  <line fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"
+                    x1="62.9" x2="48.8" y1="193.1" y2="207.2" />
+                  <line fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"
+                    x1="128" x2="128" y1="220" y2="240" />
+                  <line fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"
+                    x1="193.1" x2="207.2" y1="193.1" y2="207.2" />
+                  <line fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"
+                    x1="220" x2="240" y1="128" y2="128" />
+                  <line fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"
+                    x1="193.1" x2="207.2" y1="62.9" y2="48.8" />
+                </svg>
+              </span>
+            </button></li>
         </ul>
       </div>
 
-      <ul class="gap-2 items-center py-4 me-8 hidden md:flex">
-        <li><button class="py-2 px-4 relative inline-flex items-center hover:scale-105 transition" href=""><img
-              src="assets/images/shopping_icon.svg" class="w-8" alt="shopping cart icon">
-            <div
-              class="absolute inline-flex items-center justify-center w-7 h-7 text-xs font-bold text-white bg-pink-400 border-2 border-white rounded-full -top-1 -end-1">
+      <ul class="gap-2 items-center py-4 me-4 hidden md:flex">
+        <li><a class="nav-cart" href=""><img src="assets/images/shopping_icon.svg" class="w-8" alt="shopping cart icon">
+            <div class="nav-badge">
               20</div>
-          </button>
+          </a>
         </li>
         <li><a class="action-button" href="">Contact US</a>
         </li>
       </ul>
 
+      <!-- Mobile menu button -->
       <button class="md:hidden">
-        <div class="text-3xl"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+        <span class="text-3xl"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
             class="w-8 h-8 fill-pink-400">
             <path
               d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
-          </svg></div>
+          </svg></span>
       </button>
     </nav>
 
   </header>
 
-  <!-- Main Image -->
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs">
+    <a class="breadcrumbs-inactive" href="#">
+      <svg class="inline-block w-6 h-6 -mt-1 fill-gray-400 hover:fill-blue-400" style="enable-background:new 0 0 24 24;"
+        version="1.1" viewBox="0 0 24 24">
+        <path
+          d="M12,3c0,0-6.186,5.34-9.643,8.232C2.154,11.416,2,11.684,2,12c0,0.553,0.447,1,1,1h2v7c0,0.553,0.447,1,1,1h3  c0.553,0,1-0.448,1-1v-4h4v4c0,0.552,0.447,1,1,1h3c0.553,0,1-0.447,1-1v-7h2c0.553,0,1-0.447,1-1c0-0.316-0.154-0.584-0.383-0.768  C18.184,8.34,12,3,12,3z" />
+      </svg>
 
-
+    </a><span>
+      <svg class="inline-block" fill="none" height="18" stroke="currentColor" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="1" viewBox="0 0 24 24" width="24">
+        <polyline points="9 18 15 12 9 6" />
+      </svg>
+    </span><a class="breadcrumbs-inactive" href="#">Recipes</a><span> <svg class="inline-block" fill="none" height="18"
+        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewBox="0 0 24 24"
+        width="24">
+        <polyline points="9 18 15 12 9 6" />
+      </svg></span><a class="breadcrumbs-active" href="#">All</a>
+  </div>
   <!-- Main -->
   <main>
 
     <div class="containter mx-auto mt-4">
       <!-- Hero -->
-      <section class="px-4 flex gap-4">
-        <article class="h-96 w-2/3 relative mb-8 rounded-3xl overflow-hidden">
-          <a class="absolute top-0 bottom-0 left-0 right-0" href="">
-            <h2 class="absolute p-4 bottom-0 left-0 z-10 leading-tight text-4xl font-bold text-white">
+      <section class="hero-section">
+        <article class="hero-article w-2/3 group">
+          <a class="hero-link" href="">
+            <h2 class="hero-header">
               Turning ordinary moments into Cookie Bliss</h2>
-            <img class="absolute left-0 top-0 w-full h-full object-cover" src="assets/images/cookie-bg.jpg"
-              alt="Image 1" />
-            <div class="cover-primary"></div>
+            <img class="hero-image-primary" src="assets/images/cookie-bg.jpg" alt="Image 1" />
+            <div class="hero-image__gradient-primary"></div>
           </a>
         </article>
 
-        <article class="h-96 w-1/3 relative mb-8 rounded-3xl overflow-hidden">
-          <a class="absolute top-0 bottom-0 left-0 right-0" href="">
-            <h2 class="absolute p-4 bottom-0 left-0 z-10 leading-tight text-4xl font-bold text-white">Discover new
+        <article class="hero-article w-1/3 group">
+          <a class="hero-link" href="">
+            <h2 class="hero-header">
+              Discover new
               tastes</h2>
-            <img class="absolute left-0 top-0 w-full h-full object-cover" src="assets/images/cookie-product.jpg"
-              alt="Image 2" />
-            <div class="cover-secondary"></div>
+            <img class="hero-image-secondary" src="assets/images/cookie-product.jpg" alt="Image 2" />
+            <div class="hero-image__gradient-secondary"></div>
           </a>
         </article>
       </section>
 
       <!-- Wrapper for articles and subscription -->
-      <div class="flex px-4 gap-4">
-        <div class="flex-grow basis-0">
+      <div class="container-main">
+        <div class="container-grow">
+
           <!-- Articles -->
-          <section>
-            <h1 class="text-4xl font-bold text-white ps-8 p-4 bg-blue-300 rounded-3xl mb-4">
+          <section class="container-grow">
+            <h1 class="header-main">
               Recipes</h1>
             <div>
-
               <article class="mb-4">
-                <a class="flex rounded-s-2xl overflow-hidden" href="">
-                  <div class="border-2 border-s-0 border-blue-400 ps-12 pe-12 rounded-e-2xl">
-                    <h2 class="mt-8 text-2xl font-bold text-blue-400 pb-6">Recipe 1</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi natus
-                      magnam delectus
-                      suscipit,
-                      modi non, facere cupiditate numquam maxime officiis tempora sequi exercitationem amet, doloribus
-                      nesciunt!
-                      Tempore, libero consequuntur!</p>
+                <a class="container-article group" href="">
+                  <div class="article-text">
+                    <h2 class="article-header">Recipe 1</h2>
+                    <p class="article-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus
+                      asperiores
+                      iste beatae animi, odit neque obcaecati facere velit, modi a, eum ullam autem quaerat. Error
+                      aliquam optio in totam, aliquid vitae tempora! Distinctio harum magni cum quis porro sint hic,
+                      quas ex temporibus excepturi assumenda blanditiis illum atque perferendis iste voluptatibus
+                      ratione omnis, tempora explicabo dignissimos quo quidem exercitationem ullam? Tenetur, repellat.
+                      Consectetur, voluptatibus autem. Laudantium, molestias iure dolore ullam natus vero eveniet quia
+                      eum laborum porro id error? Deserunt ipsa ea eveniet officia tempora hic error, ipsum
+                      exercitationem, earum distinctio itaque nulla? Atque repudiandae voluptatibus cupiditate
+                      asperiores magni fugit.</p>
                   </div>
-                  <img class="h-64 w-64 object-cover order-first" src="assets/images/heart-cookie.jpg" alt="Image 1" />
+                  <div class="article-cover"> <img class="article-image" src="assets/images/heart-cookie.jpg"
+                      alt="Image 1" />
+                    <div class="article-image__overlay"></div>
+                  </div>
                 </a>
               </article>
 
               <article class="mb-4">
-                <a class="flex rounded-s-2xl overflow-hidden" href="">
-                  <div class="border-2 border-s-0 border-blue-400 ps-12 pe-12 rounded-e-2xl">
-                    <h2 class="mt-8 text-2xl font-bold text-blue-400 pb-6">Recipe 1</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi natus
-                      magnam delectus
-                      suscipit,
-                      modi non, facere cupiditate numquam maxime officiis tempora sequi exercitationem amet, doloribus
-                      nesciunt!
-                      Tempore, libero consequuntur!</p>
+                <a class="container-article group" href="">
+                  <div class="article-text">
+                    <h2 class="article-header">Recipe 1</h2>
+                    <p class="article-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus
+                      asperiores
+                      iste beatae animi, odit neque obcaecati facere velit, modi a, eum ullam autem quaerat. Error
+                      aliquam optio in totam, aliquid vitae tempora! Distinctio harum magni cum quis porro sint hic,
+                      quas ex temporibus excepturi assumenda blanditiis illum atque perferendis iste voluptatibus
+                      ratione omnis, tempora explicabo dignissimos quo quidem exercitationem ullam? Tenetur, repellat.
+                      Consectetur, voluptatibus autem. Laudantium, molestias iure dolore ullam natus vero eveniet quia
+                      eum laborum porro id error? Deserunt ipsa ea eveniet officia tempora hic error, ipsum
+                      exercitationem, earum distinctio itaque nulla? Atque repudiandae voluptatibus cupiditate
+                      asperiores magni fugit.</p>
                   </div>
-                  <img class="h-64 w-64 object-cover order-first" src="assets/images/donuts.jpg" alt="Image 1" />
+                  <div class="article-cover"> <img class="article-image" src="assets/images/heart-cookie.jpg"
+                      alt="Image 1" />
+                    <div class="article-image__overlay"></div>
+                  </div>
                 </a>
               </article>
 
               <article class="mb-4">
-                <a class="flex rounded-s-2xl overflow-hidden" href="">
-                  <div class="border-2 border-s-0 border-blue-400 ps-12 pe-12 rounded-e-2xl">
-                    <h2 class="mt-8 text-2xl font-bold text-blue-400 pb-6">Recipe 1</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi natus
-                      magnam delectus
-                      suscipit,
-                      modi non, facere cupiditate numquam maxime officiis tempora sequi exercitationem amet, doloribus
-                      nesciunt!
-                      Tempore, libero consequuntur!</p>
+                <a class="container-article group" href="">
+                  <div class="article-text">
+                    <h2 class="article-header">Recipe 1</h2>
+                    <p class="article-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus
+                      asperiores
+                      iste beatae animi, odit neque obcaecati facere velit, modi a, eum ullam autem quaerat. Error
+                      aliquam optio in totam, aliquid vitae tempora! Distinctio harum magni cum quis porro sint hic,
+                      quas ex temporibus excepturi assumenda blanditiis illum atque perferendis iste voluptatibus
+                      ratione omnis, tempora explicabo dignissimos quo quidem exercitationem ullam? Tenetur, repellat.
+                      Consectetur, voluptatibus autem. Laudantium, molestias iure dolore ullam natus vero eveniet quia
+                      eum laborum porro id error? Deserunt ipsa ea eveniet officia tempora hic error, ipsum
+                      exercitationem, earum distinctio itaque nulla? Atque repudiandae voluptatibus cupiditate
+                      asperiores magni fugit.</p>
                   </div>
-                  <img class="h-64 w-64 object-cover order-first" src="assets/images/heart-cookie.jpg" alt="Image 1" />
+                  <div class="article-cover"> <img class="article-image" src="assets/images/heart-cookie.jpg"
+                      alt="Image 1" />
+                    <div class="article-image__overlay"></div>
+                  </div>
                 </a>
               </article>
-
             </div>
           </section>
 
@@ -140,7 +201,7 @@
             <ul class="flex justify-center">
               <li><a class="pagination rounded-s-full" href="">First</a></li>
               <li><a class="pagination" href="">Prev</a></li>
-              <li><a class="pagination" href="">1</a></li>
+              <li><a class="pagination pagination-active" href="">1</a></li>
               <li><a class="pagination" href="">2</a></li>
               <li><a class="pagination" href="">3</a></li>
               <li><a class="pagination" href="">4</a></li>
@@ -149,7 +210,9 @@
               <li><a class="pagination rounded-e-full" href="">Last</a></li>
             </ul>
           </div>
+
         </div>
+
 
         <!-- Subscription Form -->
         <div class="w-1/3">
@@ -164,14 +227,50 @@
               <button class="action-button" type="submit">Subscribe &hearts;</button>
             </div>
           </form>
+
+          <div>
+            <h2 class="header-products my-4">Our Products</h2>
+            <div class="flex gap-4">
+              <div class="product-container group">
+                <img class="px-6" src="assets/images/pink-donut.jpg" alt="">
+                <h4 class="product-header">Donkey Donut</h4>
+                <p class="product-description">Lorem ipsum, dolor sit amet.</p>
+                <div class="flex items-center justify-center gap-2">
+                  <button class="wishlist-button" type="submit">&hearts;</button>
+                  <button class="action-button w-24" type="submit">Buy</button>
+                </div>
+              </div>
+
+              <div class="product-container group">
+                <div><img class="px-6" src="assets/images/pink-donut.jpg" alt=""></div>
+
+                <h4 class="product-header">Donkey Donut</h4>
+                <p class="product-description">Lorem ipsum, dolor sit amet.</p>
+                <div class="flex items-center justify-center gap-2">
+                  <button class="wishlist-button" type="submit">&hearts;</button>
+                  <button class="action-button w-24" type="submit">Buy</button>
+                </div>
+              </div>
+
+            </div>
+            <div class="flex justify-end me-6"><a
+                class="block mt-3 text-gray-400 justify-end transition duration-300 hover:text-blue-400 hover:font-semibold"
+                href="">All
+                Products
+                &#8594;</a></div>
+
+          </div>
+
+
         </div>
+
       </div>
     </div>
 
   </main>
 
   <!-- Footer -->
-  <footer class="mt-10 py-10 px-4 bg-blue-100">
+  <footer class=" mt-10 py-10 px-4 bg-blue-50">
     <div class="flex justify-center gap-48">
       <!-- About -->
       <div class="w-2/5 ms-24">
@@ -189,14 +288,13 @@
         <div>
           <h5 class="block py-1  text-blue-500 font-bold uppercase">Company</h5>
           <ul>
-            <li><a class="block py-1 text-blue-400 underline underline-offset-4 decoration-dashed" href="#">About
+            <li><a class="footer-link" href="#">About
                 Us</a>
             </li>
-            <li><a class="block py-1 text-blue-400 underline underline-offset-4 decoration-dashed" href="#">Careers</a>
+            <li><a class="footer-link" href="#">Careers</a>
             </li>
-            <li><a class="block py-1 text-blue-400 underline underline-offset-4 decoration-dashed"
-                href="#">Testimonials</a></li>
-            <li><a class="block py-1 text-blue-400 underline underline-offset-4 decoration-dashed" href="#">Blog</a>
+            <li><a class="footer-link" href="#">Testimonials</a></li>
+            <li><a class="footer-link" href="#">Blog</a>
             </li>
           </ul>
         </div>
