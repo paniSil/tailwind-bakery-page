@@ -14,7 +14,7 @@
 
 /* Navigation */
 .header {
-  @apply border-b flex gap-8 items-center justify-between mb-10 py-4 border-blue-400;
+  @apply border-b flex md:gap-8 items-center justify-between mb-10 py-4 border-blue-400;
 }
 
 .logo {
@@ -177,6 +177,13 @@
 /* Footer */
 .footer {
   @apply mt-10 py-10 px-4 bg-blue-50 dark:bg-blue-950;
+}
+.footer-flex {
+  @apply flex flex-col md:flex-row justify-center gap-12 md-lg:gap-48;
+}
+
+.footer-lists {
+  @apply flex justify-between gap-16 md-lg:gap-32;
 }
 
 .footer-header {

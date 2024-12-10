@@ -632,18 +632,6 @@ video {
   justify-content: center;
 }
 
-.justify-between{
-  justify-content: space-between;
-}
-
-.gap-12{
-  gap: 3rem;
-}
-
-.gap-16{
-  gap: 4rem;
-}
-
 .rounded-full{
   border-radius: 9999px;
 }
@@ -771,12 +759,17 @@ video {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
   border-bottom-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(96 165 250 / var(--tw-border-opacity, 1));
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+@media (min-width: 768px){
+  .header{
+    gap: 2rem;
+  }
 }
 
 .logo{
@@ -1673,6 +1666,37 @@ video {
   background-color: rgb(23 37 84 / var(--tw-bg-opacity, 1));
 }
 
+.footer-flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+
+@media (min-width: 768px){
+  .footer-flex{
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 894px){
+  .footer-flex{
+    gap: 12rem;
+  }
+}
+
+.footer-lists{
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+@media (min-width: 894px){
+  .footer-lists{
+    gap: 8rem;
+  }
+}
+
 .footer-header{
   display: block;
   padding-top: 0.25rem;
@@ -1759,18 +1783,6 @@ video {
 
   .md\:w-2\/3{
     width: 66.666667%;
-  }
-
-  .md\:flex-row{
-    flex-direction: row;
-  }
-
-  .md\:gap-32{
-    gap: 8rem;
-  }
-
-  .md\:gap-48{
-    gap: 12rem;
   }
 }
 
