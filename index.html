@@ -16,48 +16,48 @@
 
       <!-- Navigation -->
       <nav class="navbar">
-        <div class="hidden md:block">
+        <div class="hidden md-lg:block">
           <ul class="navbar-list">
-            <li><a class="navbar-item" href="">Home</a></li>
             <li><a class="navbar-item" href="">Products</a></li>
             <li><a class="navbar-item" href="">Recipes</a></li>
             <li><a class="navbar-item" href="">Team</a></li>
-            <li><!-- Theme switcher button -->
-              <button class="switch-button">
-                <span
-                  class="w-11 h-11 rounded-full transform transition-transform  duration-500 bg-pink-400 p-2 text-white translate-x-0"
-                  id="switch-toggle">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
-                </span>
-                <!-- <div id="switch-toggle" class="bg-blue-400 translate-x-full"></div> -->
-              </button>
-            </li>
           </ul>
         </div>
       </nav>
 
-      <ul class="gap-2 items-center py-4 me-4 hidden md:flex">
-        <li><a class="navbar-cart" href=""><img src="assets/images/shopping_icon.svg" class="w-8"
-              alt="shopping cart icon">
-            <div class="navbar-badge">
-              20</div>
-          </a>
-        </li>
-        <li><a class="action-button" href="">Contact US</a>
-        </li>
-      </ul>
+      <!-- Theme switcher button -->
+      <div class="navbar-buttons">
+        <button class="switch-button">
+          <span
+            class="w-11 h-11 rounded-full transform transition-transform  duration-500 bg-pink-400 p-2 text-white translate-x-0"
+            id="switch-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+          </span>
+          <!-- <div id="switch-toggle" class="bg-blue-400 translate-x-full"></div> -->
+        </button>
 
-      <!-- Mobile menu button -->
-      <button class="md:hidden">
-        <span class="text-3xl"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
-            class="w-8 h-8 fill-pink-400 dark:fill-blue-400">
-            <path
-              d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
-          </svg></span>
-      </button>
+        <ul class="hidden md-lg:flex">
+          <li><a class="action-button" href="">Contact Us</a>
+          </li>
+          <li><a class="navbar-cart" href=""><img src="assets/images/shopping_icon.svg" class="w-8"
+                alt="shopping cart icon">
+              <div class="navbar-badge">
+                20</div>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Mobile menu button -->
+        <button class="md-lg:hidden">
+          <span class="text-3xl"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="menu-button">
+              <path
+                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+            </svg></span>
+        </button>
+      </div>
 
     </header>
 
@@ -80,10 +80,10 @@
           <polyline points="9 18 15 12 9 6" />
         </svg></span><a class="breadcrumbs-active" href="#">All</a>
     </div>
-    <!-- Main -->
 
+    <!-- Main -->
     <main>
-      <div class="container mx-auto mt-4">
+      <div class="lg:container mx-auto mt-4">
         <!-- Hero -->
         <section class="hero-section">
           <article class="hero-article w-full md:w-2/3 group">
@@ -179,8 +179,6 @@
                 <li><a class="pagination pagination-active" href="">1</a></li>
                 <li><a class="pagination" href="">2</a></li>
                 <li><a class="pagination" href="">3</a></li>
-                <li><a class="pagination" href="">4</a></li>
-                <li><a class="pagination" href="">5</a></li>
                 <li><a class="pagination" href="">Next</a></li>
                 <li><a class="pagination rounded-e-full" href="">Last</a></li>
               </ul>
@@ -198,24 +196,19 @@
                 <input type="email" id="email" placeholder="Your email" class="form-field">
               </div>
               <div class="mt-4">
-                <button class="action-button" type="submit">Subscribe &hearts;</button>
+                <button class="action-button" type="submit">Subscribe</button>
               </div>
             </form>
           </div>
-
-
         </div>
-
       </div>
-
-
     </main>
   </div>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="page-container">
-      <div class="flex justify-center gap-24 md:gap-48">
+      <div class="flex flex-col md:flex-row justify-center gap-12 md:gap-48">
         <!-- About -->
         <div>
           <h5 class="footer-header">Cookie Bliss</h5>
@@ -254,10 +247,9 @@
             </ul>
           </div>
         </div>
+
       </div>
-
     </div>
-
   </footer>
 
   <script src="src/js/main.js"></script>

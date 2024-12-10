@@ -9,16 +9,16 @@
 }
 
 .page-container {
-  @apply container mx-auto px-4;
+  @apply lg:container mx-auto px-4;
 }
 
 /* Navigation */
 .header {
-  @apply border-b flex gap-8 items-center justify-between mb-10 border-blue-400;
+  @apply border-b flex gap-8 items-center justify-between mb-10 py-4 border-blue-400;
 }
 
 .logo {
-  @apply font-bold uppercase text-pink-400 flex gap-2 items-center ms-4 transition-all duration-300 hover:text-blue-400 hover:scale-105 dark:text-blue-400 dark:hover:text-pink-400;
+  @apply min-w-40 font-bold uppercase text-pink-400 flex gap-2 items-center ms-4 transition-all duration-300 hover:text-blue-400 hover:scale-105 dark:text-blue-400 dark:hover:text-pink-400;
 }
 
 .navbar {
@@ -26,15 +26,19 @@
 }
 
 .navbar-list {
-  @apply flex gap-4 items-center py-4;
+  @apply flex gap-4 items-center;
 }
 
 .navbar-item {
   @apply font-semibold text-blue-400 block py-2 px-4 border-2 border-blue-400 rounded-full transition-all duration-300 hover:scale-110 hover:bg-blue-200 hover:font-bold hover:text-white hover:shadow-md hover:shadow-blue-700 dark:hover:text-pink-400 dark:hover:border-pink-400 dark:hover:bg-pink-200 dark:hover:shadow-pink-700 dark:bg-slate-800;
 }
 
+.navbar-buttons {
+  @apply flex justify-between items-center gap-6;
+}
+
 .navbar-cart {
-  @apply py-2 px-4 relative inline-flex items-center hover:scale-105 transition;
+  @apply py-2 ps-4 pe-4 relative inline-flex items-center hover:scale-105 transition;
 }
 
 .navbar-badge {
@@ -47,24 +51,11 @@
 }
 
 .action-button {
-  @apply block py-2 px-4 border-2 border-pink-400 bg-pink-400 text-white rounded-full transition-all duration-300 hover:scale-105 hover:bg-pink-100 hover:font-bold hover:text-pink-400 hover:shadow-md hover:shadow-pink-200  dark:hover:bg-slate-900 dark:hover:shadow-pink-700;
+  @apply block w-full md:w-auto py-2 px-4 border-2 border-pink-400 bg-pink-400 text-white rounded-full transition-all duration-300 hover:scale-105 hover:bg-pink-100 hover:font-bold hover:text-pink-400 hover:shadow-md hover:shadow-pink-200  dark:hover:bg-slate-900 dark:hover:shadow-pink-700;
 }
 
-/* Footer */
-.footer {
-  @apply mt-10 py-10 px-4 bg-blue-50 dark:bg-blue-950;
-}
-
-.footer-header {
-  @apply block py-1 text-blue-500 font-bold uppercase;
-}
-
-.footer-link {
-  @apply block py-1 text-blue-400 underline underline-offset-4 decoration-dotted decoration-2 hover:decoration-solid hover:decoration-2 hover:text-blue-500;
-}
-
-.footer-contacts {
-  @apply block py-1 text-blue-400;
+.menu-button {
+  @apply w-8 h-8 fill-pink-400 dark:fill-blue-400 hover:fill-blue-400 dark:hover:fill-pink-400;
 }
 
 /* Breadcrumbs */
@@ -159,7 +150,7 @@
 
 /* Pagination */
 .pagination {
-  @apply block py-1 px-3 border border-gray-200 text-gray-400 transition duration-150 hover:bg-blue-200 hover:text-blue-400 hover:border-blue-400 hover:font-semibold dark:border-slate-700 dark:text-slate-500 dark:hover:text-pink-700 dark:hover:border-pink-700 dark:hover:bg-pink-400;
+  @apply block visible py-1 px-3 border border-gray-200 text-gray-400 transition duration-150 hover:bg-blue-200 hover:text-blue-400 hover:border-blue-400 hover:font-semibold dark:border-slate-700 dark:text-slate-500 dark:hover:text-pink-700 dark:hover:border-pink-700 dark:hover:bg-pink-400;
 }
 
 .pagination-active {
@@ -168,7 +159,7 @@
 
 /* Subscription */
 .form-container {
-  @apply w-full mx-auto rounded-3xl shadow-md shadow-gray-200 border p-6 dark:shadow-black dark:border-slate-700;
+  @apply w-full mx-auto rounded-3xl shadow-md mb-6 shadow-gray-200 border p-6 dark:shadow-black dark:border-slate-700;
 }
 
 .form-header {
@@ -181,4 +172,21 @@
 
 .form-field {
   @apply shadow appearance-none border-2 border-gray-400 rounded-full w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-pink-400 focus:text-pink-400 dark:bg-slate-800 dark:border-slate-600;
+}
+
+/* Footer */
+.footer {
+  @apply mt-10 py-10 px-4 bg-blue-50 dark:bg-blue-950;
+}
+
+.footer-header {
+  @apply block py-1 text-blue-500 font-bold uppercase;
+}
+
+.footer-link {
+  @apply block py-1 text-blue-400 underline underline-offset-4 decoration-dotted decoration-2 hover:decoration-solid hover:decoration-2 hover:text-blue-500;
+}
+
+.footer-contacts {
+  @apply block py-1 text-blue-400;
 }
