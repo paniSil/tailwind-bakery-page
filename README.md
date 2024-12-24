@@ -1,6 +1,6 @@
-# hillel-home-work-15
- Website made with Tailwind CSS
+# Bakery Recipe page example using Tailwind CSS
+ Website page made with Tailwind CSS
 
 Project page:
- [Homework 15](https://panisil.github.io/hillel-home-work-15/)
+ [tailwind-bakery-page](https://panisil.github.io/tailwind-bakery-page/)
 
